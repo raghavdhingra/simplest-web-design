@@ -1,0 +1,178 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto");
+body{
+    overflow: hidden;
+    background: #111;
+    color: white;
+}
+.nope{
+    opacity: 0;
+    z-index: -2;
+    position: absolute;
+    font-size: 25px;
+}
+h1{
+    color: #fff;
+}
+hr{
+    position: relative;
+    float: left;
+}
+.topnav{
+    position: fixed;
+    z-index: 10;
+    display: flex;
+    flex-direction: row;
+    background: #000;
+    width: 100%;
+    height: 50px;
+    top:0;
+    left:0; 
+    color: #fff;
+    text-transform: uppercase;
+}
+.topelmt{
+    text-align: center;
+    vertical-align: middle;
+    line-height: 50px;
+    position: relative;
+    height: 35px;
+    width: 200px;
+    margin-left: 10px;
+    font-size: 20px;
+    display: inline-table;
+    transition: 0.3s;
+}
+a{
+    text-decoration: none;
+}
+.topelmt:hover{
+    background: #333;
+    cursor: pointer;
+    transform:scale(1.1);
+    box-shadow: 1px 1px 10px 0.5px black;
+}
+.active{
+    background: #fff !important;
+    color: #05386b;
+}
+.active:hover{
+    transform: scale(1.1);
+}
+.heading{
+    top: 40px;
+    left: 50px;
+    position: relative;
+    font-size: 100px;
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
+    color: #aaa;
+}
+.heading1{
+    text-align: left;
+    opacity: 0;
+    animation: anim1 1s ease forwards;
+}
+.heading2{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: anim2 1s ease forwards;
+}
+.heading3{
+    text-align: center;
+    animation: anim3 1s ease forwards;
+}
+@keyframes anim1{
+    0%{
+        opacity: 0;
+        left: 200px;
+    }
+    100%{
+        opacity: 1;
+        left: 50px;
+    }
+}
+@keyframes anim2{
+    0%{
+        opacity: 0;
+        top: 0%;
+    }
+    100%{
+        opacity: 1;
+        top: 10%;
+    }
+}
+@keyframes anim3{
+    0%{
+        opacity: 0;
+        top: -10px;
+    }
+    100%{
+        opacity: 1;
+        top: 20px;
+    }
+}
+.lines{
+    position: relative;
+    color: white;
+    left: 50px;
+    font-size: 17px;
+    animation: text_anim 1s ease forwards;
+    opacity: 0;
+    animation-delay: 0.5s;
+}
+@keyframes text_anim{
+    0%{
+        top: 200px;
+        opacity: 0;
+    }
+    100%{
+        top: 50px;
+        opacity: 1;
+    }
+}
+.contact{
+    position: absolute;
+    height: 70%;
+    width: 80%;
+    background: #333;
+    align-content: center;
+    opacity: 0;
+    border-radius: 10px;
+    animation: contact_win 1s ease forwards;
+    animation-delay: 0.2s;
+}
+@keyframes contact_win{
+    0%{
+        top: 70%;
+        left: 50%;
+        opacity: 0;
+        transform: translate(-50%,-30%);
+    }
+    100%{
+        top: 47%;
+        opacity: 1;
+        left: 50%;
+        transform: translate(-50%,-30%);
+    }
+}
+.about{
+    position: absolute;
+    top: 30%;
+    color: #ddd;
+    font-size: 20px;
+    left: 50%;
+    transform: translateX(-50%); 
+    text-align: center;
+}
+a{
+    text-decoration: none;
+    color: #999;
+    transition: 0.5s;
+}
+a:hover{
+    color: #eee;
+}
+.space{
+    letter-spacing: 20px;
+}
